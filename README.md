@@ -1,3 +1,5 @@
+[![License](http://poser.pugx.org/kylegg/web-utilities/license)](https://packagist.org/packages/kylegg/web-utilities)
+
 # WebUtilities
 A kit of Laravel helper classes that I have found useful in my own projects.
 
@@ -36,4 +38,15 @@ public function map(): void
 		->namespace('App\Http\Controllers\Bizozzle')
 		->group(base_path('routes/bizozzle.php'));
 }
+```
+
+The domain helper is intended to be used for routing and each function returns the following:
+```php
+Domain::TLD(); // returns "example.com" when app.url is set to https://www.example.com
+```
+```php
+Domain::DotLedTLD(); // returns ".example.com" when app.url is set to https://www.example.com
+```
+```php
+Domain::Subdomain("bizozzle"); // returns "bizozzle.example.com" when app.url is set to https://www.example.com
 ```
