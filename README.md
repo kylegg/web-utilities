@@ -25,7 +25,7 @@ public function map(): void
 	//
 	// Domain: www.example.com
 	//
-	Route::domain(Domain::Subdomain('www'))
+	Route::domain(Domain::subdomain('www'))
 		->middleware('web')
 		->namespace('App\Http\Controllers\Web')
 		->group(base_path('routes/web.php'));
@@ -33,7 +33,7 @@ public function map(): void
 	//
 	// Domain: bizozzle.example.com
 	//
-	Route::domain(Domain::Subdomain('bizozzle'))
+	Route::domain(Domain::subdomain('bizozzle'))
 		->middleware('web')
 		->namespace('App\Http\Controllers\Bizozzle')
 		->group(base_path('routes/bizozzle.php'));
@@ -45,8 +45,8 @@ The domain helper is intended to be used for routing and each function returns t
 Domain::TLD(); // returns "example.com" when app.url is set to https://www.example.com
 ```
 ```php
-Domain::DotLedTLD(); // returns ".example.com" when app.url is set to https://www.example.com
+Domain::dotLedTLD(); // returns ".example.com" when app.url is set to https://www.example.com
 ```
 ```php
-Domain::Subdomain("bizozzle"); // returns "bizozzle.example.com" when app.url is set to https://www.example.com
+Domain::subdomain("bizozzle"); // returns "bizozzle.example.com" when app.url is set to https://www.example.com
 ```

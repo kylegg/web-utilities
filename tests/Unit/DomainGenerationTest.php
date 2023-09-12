@@ -20,7 +20,7 @@ final class DomainGenerationTest extends TestCase
 	 */
 	public function testDotLedTLD(): void
 	{
-		$this->assertSame('.example.com', Domain::DotLedTLD());
+		$this->assertSame('.example.com', Domain::dotLedTLD());
 	}
 	
 	/**
@@ -28,7 +28,7 @@ final class DomainGenerationTest extends TestCase
 	 */
 	public function testSubdomain(): void
 	{
-		$this->assertSame('example.com', Domain::Subdomain(''));
-		$this->assertSame('bizozzle.example.com', Domain::Subdomain('bizozzle'));
+		$this->assertSame('example.com', Domain::subdomain(''));
+		$this->assertSame('bizozzle.example.com', Domain::subdomain('bizozzle'));
 	}
 }

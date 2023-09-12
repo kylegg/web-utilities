@@ -25,7 +25,7 @@ class Domain
 	 * @example echo Domain::DotLedTLD(); // returns .example.com
 	 * @return string $baseUrl
 	 */
-	public static function DotLedTLD(): string
+	public static function dotLedTLD(): string
 	{
 		return '.'.self::TLD();
 	}
@@ -38,7 +38,7 @@ class Domain
 	 * @example echo Domain::Subdomain("bizozzle"); // returns bizozzle.example.com
 	 * @return string $baseUrl
 	 */
-	public static function Subdomain(string $subdomain): string
+	public static function subdomain(string $subdomain): string
 	{
 		if (empty($subdomain))
 			return self::TLD();
