@@ -6,7 +6,7 @@ A kit of Laravel helper classes that I have found useful in my own projects.
 ## Installing
 Use composer to install WebUtilities
 ```bash
-composer install kylegg/web-utilities
+composer require kylegg/web-utilities:dev-main --dev
 ```
 
 ## Usage
@@ -17,8 +17,6 @@ use Kylegg\WebUtilities\Domain;
 
 /**
  * Define the routes for the application.
- *
- * @return void
  */
 public function map(): void
 {
